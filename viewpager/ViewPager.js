@@ -25,9 +25,6 @@ export default class ViewPager extends Component {
         onPageSelected: null,
         onPageScrollStateChanged: null,
         currentPage: 0,
-        /**
-         * iOS not support yet
-         */
         pageMargin: 0
     };
 
@@ -85,11 +82,15 @@ export default class ViewPager extends Component {
             scrollEventThrottle: needMonitorScroll ? ( this.props.onPageScroll ? 8 : 1) : 0,
         };
         if (needMonitorTouch) props = Object.assign(props, this._panResponder.panHandlers);
+        const scrollViewStyle = {
+          overflow: 'visible',
+          marginHorizontal: -this.props.pageMargin / 2,
+        };
         if (this.props.style && !this.props.style.height)
-            return <ScrollView {...props}/>;
+            return <ScrollView {...props} style={[this.props.style, scrollViewStyle]}/>;
         else return (
             <View style={this.props.style}>
-                <ScrollView {...props} style={null}/>
+                <ScrollView {...props} style={scrollViewStyle}/>
             </View>
         );
     }
