@@ -1,6 +1,6 @@
 {
   "name": "react-native-viewpager-enhanced",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "description": "ViewPager component for react-native, same api on both android and ios.",
   "main": "index.js",
   "scripts": {
