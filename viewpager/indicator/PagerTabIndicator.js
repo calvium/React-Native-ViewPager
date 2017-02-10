@@ -62,6 +62,7 @@ export default class PagerTabIndicator extends Component {
             let isSelected = this.state.selectedIndex === index;
             return (
                     <TouchableOpacity
+							disabled={this.props.disabled}
                             style={[styles.itemContainer, isSelected ? selectedItemStyle : itemStyle]}
                             activeOpacity={0.6}
                             key={index}
