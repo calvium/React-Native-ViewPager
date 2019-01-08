@@ -30,6 +30,11 @@
   "author": "ZubinTang",
   "contributors": ["JRK"],
   "license": "ISC",
+  "peerDependencies": {
+    "react": "16.6.3",
+    "react-native": "0.57.8",
+    "prop-types": "15.6.2"
+  },
   "bugs": {
     "url": "https://github.com/jreziga/React-Native-ViewPager/issues"
   },
