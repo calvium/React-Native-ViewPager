@@ -6,7 +6,7 @@
 
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, ViewPropTypes} from 'react-native';
 import ViewPager from './ViewPager';
 
 const VIEWPAGER_REF = 'viewPager';
@@ -18,7 +18,7 @@ export default class IndicatorViewPager extends Component {
         indicator: PropTypes.node,
         indicatorPosition: PropTypes.string,
         scrollEnabled: PropTypes.bool,
-        pagerStyle: View.propTypes.style
+        pagerStyle: ViewPropTypes.style
     };
 
     static defaultProps = {
